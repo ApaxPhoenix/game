@@ -1,3 +1,10 @@
-import { makeHello } from "shared/module";
+// Modules
 
-print(makeHello("main.server.ts"));
+import { config } from "shared/lighting/config";
+import { start } from "shared/lighting/main";
+
+// Initialization
+
+if (!config.client) {
+	start();
+}
